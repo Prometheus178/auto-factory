@@ -3,7 +3,6 @@ package com.autofactory.model.car.detail.transmission;
 
 import com.autofactory.model.BaseEntity;
 import com.autofactory.model.Car;
-import com.autofactory.model.car.detail.Detail;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -13,7 +12,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "transmission")
-public class Transmission extends BaseEntity implements Serializable, Detail {
+public class Transmission extends BaseEntity implements Serializable {
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "transmission_type_id", referencedColumnName = "id")
